@@ -1,6 +1,10 @@
 import { FC, useMemo, useState } from 'react';
 
-import { LOCAL_STORAGE_THEM_KEY, Theme, ThemeContext } from './ThemeContext';
+import {
+  LOCAL_STORAGE_THEM_KEY,
+  Theme,
+  ThemeContext,
+} from '../lib/ThemeContext';
 
 const ThemeProvider: FC = ({ children }) => {
   const defautTheme =
