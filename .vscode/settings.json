@@ -5,5 +5,4 @@
   "i18n-ally.defaultNamespace": "translation",
   "i18n-ally.keystyle": "nested",
   "i18n-ally.enabledFrameworks": ["react", "i18next", "general"]
-  // "eslint.workingDirectories": [{ "mode": "auto" }]
 }
