@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -37,6 +37,7 @@ module.exports = {
     'operator-linebreak': 'off',
     'arrow-body-style': 'off',
     'implicit-arrow-linebreak': 'off',
+    'i18next/no-literal-string': 2,
   },
   globals: {
     __IS_DEV__: true,
