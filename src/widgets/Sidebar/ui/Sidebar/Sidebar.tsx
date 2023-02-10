@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
-import LangSwitcher from 'widgets/LangSwitcher/LangSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
 
 import style from './sidebar.module.scss';
 
@@ -32,5 +32,3 @@ export const Sidebar = ({ className }: SidebarProps) => {
     </div>
   );
 };
-
-export default Sidebar;

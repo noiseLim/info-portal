@@ -40,6 +40,7 @@ module.exports = {
     'implicit-arrow-linebreak': 'off',
     'i18next/no-literal-string': 2,
     'max-len': ['error', { ignoreComments: true }],
+    'react/jsx-wrap-multilines': ['error', { prop: false }],
   },
   globals: {
     __IS_DEV__: true,
