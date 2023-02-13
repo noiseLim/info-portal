@@ -38,8 +38,8 @@ module.exports = {
     'operator-linebreak': 'off',
     'arrow-body-style': 'off',
     'implicit-arrow-linebreak': 'off',
-    'i18next/no-literal-string': 2,
-    'max-len': ['error', { ignoreComments: true }],
+    'i18next/no-literal-string': 'error',
+    'max-len': ['error', { ignoreComments: true, code: 110 }],
     'react/jsx-wrap-multilines': ['error', { prop: false }],
   },
   globals: {
