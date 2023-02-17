@@ -41,7 +41,6 @@ module.exports = {
     'i18next/no-literal-string': 'error',
     'max-len': ['error', { ignoreComments: true, code: 110 }],
     'react/jsx-wrap-multilines': ['error', { prop: false }],
-    'linebreak-style': 0,
   },
   globals: {
     __IS_DEV__: true,

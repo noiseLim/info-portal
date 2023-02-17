@@ -7,10 +7,10 @@ on:
     branches: [master]
 jobs:
   pipeline:
-    runs-on: windows-2019
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [17.x]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
@@ -21,13 +21,19 @@ jobs:
         run: npm install
       - name: build production project
         run: npm run build:prod
+        if: always()
       - name: linting typescript
         run: npm run lint:ts
+        if: always()
       - name: linting styles
         run: npm run lint:scss
+        if: always()
       - name: unit testing
         run: npm run test:unit
+        if: always()
       - name: build storybook
         run: npm run storybook:build
+        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
+        if: always()
