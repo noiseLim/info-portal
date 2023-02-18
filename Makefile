@@ -7,3 +7,9 @@ run-dev:
 	--rm \
 	--name node \
 	info-portal
+
+up:
+	docker-compose up -d
+
+down:
+	docker-compose down

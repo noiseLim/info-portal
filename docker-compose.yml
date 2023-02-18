@@ -2,5 +2,10 @@ version: '3.9' # optional since v1.27.0
 services:
   app:
     build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - '/Users/noiselim/projects/info-portal:/app'
+      - /app/node_modules
   chrome:
     image: yukinying/chrome-headless-browser-stable:100.0.4896.127
