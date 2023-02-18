@@ -1,0 +1,6 @@
+version: '3.9' # optional since v1.27.0
+services:
+  app:
+    build: .
+  chrome:
+    image: yukinying/chrome-headless-browser-stable:100.0.4896.127
