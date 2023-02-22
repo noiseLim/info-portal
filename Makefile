@@ -9,7 +9,7 @@ run-dev:
 	info-portal
 
 up:
-	docker-compose up
+	docker-compose up -d
 
 down:
 	docker-compose down
