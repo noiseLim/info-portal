@@ -9,5 +9,7 @@
   "Throw Error": "Выдать ошибку",
   "Toggle": "Переключить",
   "Short language": "Ру",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Increment": "Увеличить",
+  "Decrement": "Уменьшить"
 }

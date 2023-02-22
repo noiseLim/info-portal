@@ -9,5 +9,7 @@
   "Throw Error": "Throw Error",
   "Toggle": "Toggle",
   "Short language": "EN",
-  "Login": "Login"
+  "Login": "Login",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }
