@@ -8,7 +8,6 @@ import {
 } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTheme } from 'app/providers/ThemeProvider';
 import { Portal } from '../Portal/Portal';
 
 import style from './modal.module.scss';
@@ -26,7 +25,6 @@ export const Modal = (props: ModalProps) => {
   const { className, children, isOpen, onClose } = props;
   const [isClosing, setIsClosing] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
-  const { theme } = useTheme();
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -64,7 +62,6 @@ export const Modal = (props: ModalProps) => {
   const mods = {
     [style.opened]: isOpen,
     [style.isClosing]: isClosing,
-    [style[theme]]: true,
   };
 
   return (
