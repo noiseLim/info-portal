@@ -10,8 +10,11 @@
   "Toggle": "Переключить",
   "Short language": "Ру",
   "Login": "Войти",
+  "Logout": "Выйти",
   "Increment": "Увеличить",
   "Decrement": "Уменьшить",
   "Enter username": "Введите username",
-  "Enter password": "Введите пароль"
+  "Enter password": "Введите пароль",
+  "Authorization form": "Форма авторизации",
+  "You entered an incorrect password": "Вы ввели неверный пароль"
 }

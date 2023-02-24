@@ -10,8 +10,11 @@
   "Toggle": "Toggle",
   "Short language": "EN",
   "Login": "Login",
+  "Logout": "Logout",
   "Increment": "Increment",
   "Decrement": "Decrement",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Authorization form": "Authorization form",
+  "You entered an incorrect password": "You entered an incorrect password"
 }
