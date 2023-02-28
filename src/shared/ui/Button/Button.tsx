@@ -1,5 +1,8 @@
-import { ButtonHTMLAttributes, FC } from 'react';
+/* eslint-disable no-unused-vars */
+import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+
 import { classNames } from 'shared/lib/classNames/classNames';
+
 import style from './button.module.scss';
 
 export enum ButtonTheme {
@@ -21,8 +24,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean;
   size?: string;
   disabled?: boolean;
+  children?: ReactNode;
 }
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = memo((props: ButtonProps) => {
   const {
     className,
     children,
@@ -50,4 +54,4 @@ export const Button: FC<ButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});
