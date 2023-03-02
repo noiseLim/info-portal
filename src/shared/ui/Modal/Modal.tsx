@@ -5,9 +5,10 @@ import {
   useRef,
   useEffect,
   useCallback,
+  MutableRefObject,
 } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { Portal } from '../Portal/Portal';
 
@@ -30,7 +31,7 @@ export const Modal = (props: ModalProps) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const { theme } = useTheme();
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   useEffect(() => {
     if (isOpen) {
@@ -71,7 +72,7 @@ export const Modal = (props: ModalProps) => {
     e.stopPropagation();
   };
 
-  const mods = {
+  const mods: Mods = {
     [style.opened]: isOpen,
     [style.isClosing]: isClosing,
   };

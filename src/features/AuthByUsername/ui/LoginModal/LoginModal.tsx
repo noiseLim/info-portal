@@ -8,8 +8,8 @@ import style from './loginModal.module.scss';
 
 interface LoginModalProps {
   className?: string;
-  isOpen?: boolean;
-  onClose?: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
 export const LoginModal = memo(
   ({ className, isOpen, onClose }: LoginModalProps) => {

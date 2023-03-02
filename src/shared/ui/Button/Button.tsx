@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Additional, classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import style from './button.module.scss';
 
@@ -30,19 +30,19 @@ export const Button = memo((props: ButtonProps) => {
   const {
     className,
     children,
-    theme,
+    theme = ButtonTheme.OUTLINE,
     square,
     size = ButtonSize.M,
     disabled,
     ...otherProps
   } = props;
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [style.square]: square,
     [style.disabled]: disabled,
   };
 
-  const additional: string[] = [className, style[theme], style[size]];
+  const additional: Additional = [className, style[theme], style[size]];
 
   return (
     <button
