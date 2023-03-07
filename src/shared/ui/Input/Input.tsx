@@ -14,14 +14,15 @@ import style from './input.module.scss';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  'value' | 'onChange'
+  'value' | 'onChange' | 'readOnly'
 >;
 
 interface InputProps extends HTMLInputProps {
   className?: string;
-  value?: string;
+  value?: string | number;
   onChange?: (value: string) => void;
   autofocus?: boolean;
+  readonly?: boolean;
 }
 export const Input = memo((props: InputProps) => {
   const {
@@ -31,12 +32,15 @@ export const Input = memo((props: InputProps) => {
     type = 'text',
     placeholder,
     autofocus,
+    readonly,
     ...otherProps
   } = props;
 
   const [isFocused, setIsFocused] = useState(false);
   const [caretPosition, setCaretPosition] = useState(0);
   const ref = useRef<HTMLInputElement>(null);
+
+  const isCaretVisible = isFocused && !readonly;
 
   useEffect(() => {
     if (autofocus) {
@@ -63,7 +67,13 @@ export const Input = memo((props: InputProps) => {
   };
 
   return (
-    <div className={classNames(style.inputWrapper, {}, [className])}>
+    <div
+      className={classNames(
+        style.inputWrapper,
+        { [style.readonly]: readonly },
+        [className]
+      )}
+    >
       {placeholder && (
         <div className={style.placeholder}>{`${placeholder}>`}</div>
       )}
@@ -77,9 +87,10 @@ export const Input = memo((props: InputProps) => {
           onBlur={onBlur}
           onFocus={onFocus}
           onSelect={onSelect}
+          readOnly={readonly}
           ref={ref}
         />
-        {isFocused && (
+        {isCaretVisible && (
           <span
             className={style.caret}
             style={{ left: `${caretPosition * 9}px` }}

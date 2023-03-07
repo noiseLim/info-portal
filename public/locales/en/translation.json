@@ -19,5 +19,7 @@
   "Enter username": "Enter username",
   "Enter password": "Enter password",
   "Authorization form": "Authorization form",
-  "You entered an incorrect password": "You entered an incorrect password"
+  "You entered an incorrect password": "You entered an incorrect password",
+  "Select the currency": "Select the currency",
+  "Select a country": "Select a country"
 }
