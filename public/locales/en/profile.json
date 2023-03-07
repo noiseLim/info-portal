@@ -10,5 +10,10 @@
   "Enter the user name": "Enter the user name",
   "Enter the link to the avatar": "Enter the link to the avatar",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
-  "Try refreshing the page": "Try refreshing the page"
+  "Try refreshing the page": "Try refreshing the page",
+  "Server error": "Server error when saving",
+  "Incorrect country": "Incorrect country",
+  "Incorrect user data": "First and last name are required",
+  "Incorrect age": "Incorrect age",
+  "No data": "Data is not specified"
 }

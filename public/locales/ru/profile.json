@@ -10,5 +10,12 @@
   "Enter the user name": "Введите имя пользователя",
   "Enter the link to the avatar": "Введите ссылку на аватар",
   "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
-  "Try refreshing the page": "Попробуйте обновить страницу"
+  "Try refreshing the page": "Попробуйте обновить страницу",
+  "Server error": "Серверная ошибка при сохранении",
+  "Incorrect country": "Некорректный регион",
+  "Incorrect user data": "Имя и фамилия обязательны",
+  "Incorrect age": "Некорректный возраст",
+  "No data": "Данные не указаны"
+
+
 }
