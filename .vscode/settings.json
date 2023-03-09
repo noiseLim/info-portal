@@ -4,5 +4,213 @@
   "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
   "i18n-ally.defaultNamespace": "translation",
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.enabledFrameworks": ["react", "i18next", "general"]
+  "i18n-ally.enabledFrameworks": ["react", "i18next", "general"],
+  "folderTemplates.fileTemplates": {
+    "Typescript Functional Component": [
+      "import { useTranslation } from 'react-i18next';",
+      "",
+      "import { classNames } from 'shared/lib/classNames/classNames';",
+      "",
+      "import style from './<FTName | camelcase>.module.scss';",
+      "",
+      "interface <FTName>Props {",
+      "  className?: string;",
+      "}",
+      "",
+      "export const <FTName> = ({ className }: <FTName>Props) => {",
+      "  const { t } = useTranslation();",
+      "",
+      "  return (",
+      "    <div className={classNames(style.<FTName | camelcase> , {}, [className])}>",
+      "",
+      "    </div>",
+      "  );",
+      "};",
+      ""
+    ],
+    "Index file (named export)": [
+      "export { <FTName | capitalize> } from './ui/<FTName>'",
+      ""
+    ],
+    "Index file (default export)": [
+      "export <FTName | capitalize> from './ui/<FTName>'",
+      ""
+    ],
+    "Index file (lazy component)": [
+      "export { <FTName>Async as <FTName> } from './ui/<FTName>.async'",
+      ""
+    ],
+    "Storybook file": [
+      "import { ComponentStory, ComponentMeta } from '@storybook/react';",
+      "",
+      "import { <FTName> } from './<FTName>';",
+      "",
+      "export default {",
+      "  title: 'entities/<FTName>',",
+      "  component: <FTName>,",
+      "  argTypes: {",
+      "    backgroundColor: { control: 'color' },",
+      "  },",
+      "} as ComponentMeta<typeof <FTName>>;",
+      "",
+      "const Template: ComponentStory<typeof <FTName>> = (args) => (",
+      "  <<FTName> {...args} />",
+      ");",
+      "",
+      "export const Primary = Template.bind({});",
+      "Primary.args = {};",
+      ""
+    ],
+    "SCSS file": [
+      ".<FTName | camelcase> {",
+      "  ",
+      "}",
+      ""
+    ],
+    "Redux selector file": [
+      "import { StateSchema } from 'app/providers/StoreProvider';",
+      "",
+      "export const get<FTName>= (state: StateSchema) => state;",
+      ""
+    ],
+    "Redux slice file": [
+      "import { createSlice } from '@reduxjs/toolkit';",
+      "",
+      "import { <FTName>Schema } from '../types/<FTName>Schema';",
+      "",
+      "const initialState: <FTName>Schema = {};",
+      "",
+      "export const <FTName | camelcase>Slice = createSlice({",
+      "  name: '<FTName | camelcase>',",
+      "  initialState,",
+      "  reducers: {},",
+      "});",
+      "",
+      "export const { actions: <FTName | camelcase>Actions } = <FTName | camelcase>Slice;",
+      "export const { reducer: <FTName | camelcase>Reducer } = <FTName | camelcase>Slice;",
+      ""
+    ],
+    "Redux types (interface Schema)": [
+      "export interface <FTName>Schema {}",
+      ""
+    ],
+    "Page component": [
+      "import { memo } from 'react';",
+      "import { useTranslation } from 'react-i18next';",
+      "",
+      "const <FTName> = memo((props) => {",
+      "  const { t } = useTranslation();",
+      "  return <div>{t('<FTName>')}</div>;",
+      "});",
+      "",
+      "export default <FTName>;",
+      ""
+    ],
+    "Lazy Page component": [
+      "import { lazy } from 'react';",
+      "",
+      "export const <FTName>Async = lazy(",
+      "  () =>",
+      "    new Promise((resolve) => {",
+      "      // @ts-ignore",
+      "      setTimeout(() => resolve(import('./<FTName>')), 1500);",
+      "    })",
+      ");",
+      ""
+    ],
+  },
+  "folderTemplates.structures": [
+    {
+      "name": "Entities component",
+      "structure": [
+        {
+          "fileName": "model/selectors/get<FTName>.ts",
+          "template": "Redux selector file"
+        },
+        {
+          "fileName": "model/slice/<FTName % camelcase>Slice.ts",
+          "template": "Redux slice file"
+        },
+        {
+          "fileName": "model/types/<FTName>Schema.ts",
+          "template": "Redux types (interface Schema)"
+        },
+        {
+          "fileName": "ui/<FTName % camelcase>.module.scss",
+          "template": "SCSS file"
+        },
+        {
+          "fileName": "ui/<FTName>.stories.tsx",
+          "template": "Storybook file"
+        },
+        {
+          "fileName": "ui/<FTName>.tsx",
+          "template": "Typescript Functional Component"
+        },
+        {
+          "fileName": "index.ts",
+          "template": "Index file (named export)"
+        }
+      ]
+    },
+    {
+      "name": "Page component (with lazy)",
+      "structure": [
+        {
+          "fileName": "ui/<FTName>.async.tsx",
+          "template": "Lazy Page component"
+        },
+        {
+          "fileName": "ui/<FTName>.stories.tsx",
+          "template": "Storybook file"
+        },
+        {
+          "fileName": "ui/<FTName>.tsx",
+          "template": "Page component"
+        },
+        {
+          "fileName": "index.ts",
+          "template": "Index file (lazy component)"
+        },
+      ]
+    },
+    {
+      "name": "Shared component (ui)",
+      "structure": [
+        {
+          "fileName": "<FTName % camelcase>.module.scss",
+          "template": "SCSS file"
+        },
+        {
+          "fileName": "<FTName>.stories.tsx",
+          "template": "Storybook file"
+        },
+        {
+          "fileName": "<FTName>.tsx",
+          "template": "Typescript Functional Component"
+        },
+      ]
+    },
+    {
+      "name": "Widgets component",
+      "structure": [
+        {
+          "fileName": "ui/<FTName % camelcase>.module.scss",
+          "template": "SCSS file"
+        },
+        {
+          "fileName": "ui/<FTName>.stories.tsx",
+          "template": "Storybook file"
+        },
+        {
+          "fileName": "ui/<FTName>.tsx",
+          "template": "Typescript Functional Component"
+        },
+        {
+          "fileName": "index.ts",
+          "template": "Index file (named export)"
+        },
+      ]
+    },
+  ]
 }
