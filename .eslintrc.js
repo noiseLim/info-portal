@@ -39,7 +39,10 @@ module.exports = {
     'arrow-body-style': 'off',
     'implicit-arrow-linebreak': 'off',
     'i18next/no-literal-string': 'error',
-    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    'max-len': [
+      'error',
+      { ignoreComments: true, ignoreStrings: true, code: 120 },
+    ],
     'react/jsx-wrap-multilines': ['error', { prop: false }],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -55,7 +58,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/src/**/*.stories.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'max-len': 'off',
       },
