@@ -22,5 +22,6 @@
   "Authorization form": "Форма авторизации",
   "You entered an incorrect password": "Вы ввели неверный пароль",
   "Select the currency": "Выберите валюту",
-  "Select a country": "Выберите страну"
+  "Select a country": "Выберите страну",
+  "There are no comments": "Комментарии отсутствуют"
 }

@@ -106,7 +106,14 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://i.pcmag.com/imagery/articles/06SkkF9iYYfy7nuZEFbgjPd-1..v1656601236.jpg"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   ],
   "profile": {

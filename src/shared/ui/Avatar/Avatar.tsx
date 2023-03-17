@@ -2,6 +2,8 @@ import { CSSProperties, useMemo } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
+import defaultAvatar from '../../assets/icons/default-avatar.png';
+
 import style from './avatar.module.scss';
 
 interface AvatarProps {
@@ -24,7 +26,7 @@ export const Avatar = (props: AvatarProps) => {
   return (
     <img
       className={classNames(style.avatar, {}, [className])}
-      src={src}
+      src={src || defaultAvatar}
       alt={alt}
       style={styles}
     />
