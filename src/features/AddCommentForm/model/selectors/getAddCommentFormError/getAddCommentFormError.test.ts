@@ -4,7 +4,7 @@ import { getAddCommentFormError } from './getAddCommentFormError';
 describe('getAddCommentFormError', () => {
   test('should return error', () => {
     const state: DeepPartial<StateSchema> = {
-      loginForm: {
+      addCommentForm: {
         error: 'error',
       },
     };
