@@ -23,5 +23,7 @@
   "You entered an incorrect password": "Вы ввели неверный пароль",
   "Select the currency": "Выберите валюту",
   "Select a country": "Выберите страну",
-  "There are no comments": "Комментарии отсутствуют"
+  "There are no comments": "Комментарии отсутствуют",
+  "Enter the comment text": "Введите текст комментария",
+  "Send": "Отправить"
 }

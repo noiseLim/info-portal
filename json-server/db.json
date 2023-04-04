@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,18 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello",
+      "id": "UsRqwER"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "good article",
+      "id": "i3pHck8"
     }
   ],
   "users": [
@@ -107,7 +121,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "avatar": "https://i.pcmag.com/imagery/articles/06SkkF9iYYfy7nuZEFbgjPd-1..v1656601236.jpg"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     },
     {
       "id": "2",
@@ -116,14 +130,28 @@
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   ],
-  "profile": {
-    "first": "Сергеd",
-    "lastname": "Иванов",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CAU"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Сергей",
+      "lastname": "Иванов",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CAU"
+    },
+    {
+      "id": "2",
+      "first": "Дмитрий",
+      "lastname": "Петров",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
+    }
+  ]
 }
