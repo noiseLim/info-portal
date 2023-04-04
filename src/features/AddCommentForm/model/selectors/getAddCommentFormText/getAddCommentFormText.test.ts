@@ -8,7 +8,7 @@ describe('getAddCommentFormText', () => {
         text: 'some text',
       },
     };
-    expect(getAddCommentFormText(state as StateSchema)).toEqual('tester');
+    expect(getAddCommentFormText(state as StateSchema)).toEqual('some text');
   });
   test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {
