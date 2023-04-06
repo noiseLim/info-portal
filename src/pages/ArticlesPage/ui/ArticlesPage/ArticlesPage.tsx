@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
+import { ArticleList, ArticleView } from 'entities/Article';
 
 import style from './articlesPage.module.scss';
 
@@ -14,7 +15,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
 
   return (
     <div className={classNames(style.articlesPage, {}, [className])}>
-      {t('Articles page')}
+      <ArticleList isLoading view={ArticleView.LIST} articles={[]} />
     </div>
   );
 };
