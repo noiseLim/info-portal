@@ -16,10 +16,12 @@ import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
+import { ScrollRestorationSchema } from 'features/ScrollRestoration';
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  scrollRestoration: ScrollRestorationSchema;
 
   // async reducers
   loginForm?: LoginSchema;
