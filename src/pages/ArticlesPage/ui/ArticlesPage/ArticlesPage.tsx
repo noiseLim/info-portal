@@ -17,8 +17,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'shared/ui/Page/Page';
 import { Text } from 'shared/ui/Text/Text';
 
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import {
   articlesPageActions,
   articlesPageReducer,
@@ -48,12 +48,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const view = useSelector(getArticlesPageView);
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState());
-    dispatch(
-      fetchArticlesList({
-        page: 1,
-      })
-    );
+    dispatch(initArticlesPage());
   });
 
   const onLoadNextPart = useCallback(() => {
@@ -72,7 +67,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         className={classNames(style.articlesPage, {}, [className])}
         onScrollEnd={onLoadNextPart}
