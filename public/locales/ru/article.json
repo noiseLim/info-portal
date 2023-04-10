@@ -1,5 +1,19 @@
 {
   "Article details page": "Страница с подробной информацией о статье",
   "Articles page": "Страница co статьями",
-  "Read more": "Читать далее..."
+  "Read more": "Читать далее...",
+  "Something went wrong": "Что-то пошло не так",
+  "Sort by": "Сортировать по",
+  "Search": "Поиск",
+  "In": "По",
+  "ascending order": "возрастанию",
+  "descending order": "убыванию",
+  "creation date": "дате создания",
+  "name": "названию",
+  "views": "просмотрам",
+  "All articles": "Все статьи",
+  "IT": "Айти",
+  "Economics": "Экономика",
+  "Science": "Наука",
+  "Articles not found": "Статьи не найдены"
 }

@@ -46,7 +46,6 @@ export const Page = (props: PageProps) => {
   });
 
   const onScroll = useTrottle((e: UIEvent<HTMLDivElement>) => {
-    console.log('SCROLL');
     dispatch(
       scrollRestorationActions.setScrollPosition({
         position: e.currentTarget.scrollTop,
@@ -62,7 +61,7 @@ export const Page = (props: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={style.trigger} ref={triggerRef} /> : null}
     </section>
   );
 };
