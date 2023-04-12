@@ -13,3 +13,4 @@ export {
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData';
+export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEditArticle';

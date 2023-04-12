@@ -3,5 +3,8 @@
   "An error occurred while loading the article": "An error occurred while loading the article",
   "Comments": "Comments",
   "Back to the list": "Back to the list",
-  "We recommend": "We recommend"
+  "Edit": "Edit",
+  "We recommend": "We recommend",
+  "Editing an article with an ID": "Editing an article with an ID - ",
+  "Creating a new article": "Creating a new article"
 }
