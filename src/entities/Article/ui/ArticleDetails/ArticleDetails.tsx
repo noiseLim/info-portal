@@ -14,17 +14,18 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20x20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20x20.svg';
+
 import { getArticleDetailsData } from '../../model/selectors/getArticleDetailsData/getArticleDetailsData';
 import { getArticleDetailsError } from '../../model/selectors/getArticleDetailsError/getArticleDetailsError';
 import { getArticleDetailsIsLoading } from '../../model/selectors/getArticleDetailsIsLoading/getArticleDetailsIsLoading';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
-
-import style from './articleDetails.module.scss';
-import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'; /// ///
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+
+import style from './articleDetails.module.scss';
 
 interface ArticleDetailsProps {
   className?: string;

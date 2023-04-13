@@ -13,7 +13,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'noiselim-plugin',
+  ],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -52,6 +58,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'function-paren-newline': 'off',
+    'noiselim-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
