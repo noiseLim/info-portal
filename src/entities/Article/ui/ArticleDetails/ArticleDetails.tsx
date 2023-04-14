@@ -14,6 +14,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20x20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20x20.svg';
+import { HStack, VStack } from 'shared/ui/Stack';
 
 import { getArticleDetailsData } from '../../model/selectors/getArticleDetailsData/getArticleDetailsData';
 import { getArticleDetailsError } from '../../model/selectors/getArticleDetailsError/getArticleDetailsError';
@@ -107,23 +108,26 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        <div className={style.avatarWrapper}>
+        <HStack justify='center' max>
           <Avatar className={style.avatar} size={200} src={article?.img} />
-        </div>
-        <Text
-          className={style.title}
-          title={article?.title}
-          text={article?.subtitle}
-          size={TextSize.L}
-        />
-        <div className={style.articleInfo}>
-          <Icon className={style.icon} Svg={EyeIcon} />
-          <Text text={String(article?.views)} />
-        </div>
-        <div className={style.articleInfo}>
-          <Icon className={style.icon} Svg={CalendarIcon} />
-          <Text text={article?.createdAt} />
-        </div>
+        </HStack>
+        <VStack gap='4'>
+          <Text
+            className={style.title}
+            title={article?.title}
+            text={article?.subtitle}
+            size={TextSize.L}
+          />
+          <HStack gap='8'>
+            <Icon className={style.icon} Svg={EyeIcon} />
+            <Text text={String(article?.views)} />
+          </HStack>
+          <HStack gap='8'>
+            <Icon className={style.icon} Svg={CalendarIcon} />
+            <Text text={article?.createdAt} />
+          </HStack>
+        </VStack>
+
         {article?.blocks.map(renderBlock)}
       </>
     );
@@ -131,9 +135,12 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(style.articleDetails, {}, [className])}>
+      <VStack
+        gap='16'
+        className={classNames(style.articleDetails, {}, [className])}
+      >
         {content}
-      </div>
+      </VStack>
     </DynamicModuleLoader>
   );
 });

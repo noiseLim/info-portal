@@ -44,7 +44,21 @@ module.exports = {
     'operator-linebreak': 'off',
     'arrow-body-style': 'off',
     'implicit-arrow-linebreak': 'off',
-    'i18next/no-literal-string': 'error',
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+        ],
+      },
+    ],
     'max-len': [
       'error',
       { ignoreComments: true, ignoreStrings: true, code: 120 },
@@ -70,6 +84,7 @@ module.exports = {
       files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
         'max-len': 'off',
+        'i18next/no-literal-string': 'off',
       },
     },
   ],
