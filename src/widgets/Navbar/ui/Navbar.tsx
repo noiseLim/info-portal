@@ -10,6 +10,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 import style from './navbar.module.scss';
 
@@ -45,13 +47,15 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY}>
           {t('Create an article')}
         </AppLink>
-        <Button
-          className={style.links}
-          theme={ButtonTheme.CLEAR_INVERTED}
-          onClick={onLogout}
-        >
-          {t('Logout')}
-        </Button>
+        <Dropdown
+          className={style.dropdown}
+          items={[
+            { content: t('Profile'), href: RoutePath.profile + authData.id },
+            { content: t('Logout'), onClick: onLogout },
+          ]}
+          trigger={<Avatar size={30} src={authData.avatar} />}
+          direction='bottom left'
+        />
       </header>
     );
   }
