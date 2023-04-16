@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import style from './flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-export type FlexAlign = 'start' | 'center' | 'end';
+export type FlexAlign = 'normal' | 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
 
@@ -17,6 +17,7 @@ const justifyClasses: Record<FlexJustify, string> = {
 };
 
 const alignClasses: Record<FlexAlign, string> = {
+  normal: style.alignNormal,
   start: style.alignStart,
   center: style.alignCenter,
   end: style.alignEnd,
