@@ -30,7 +30,7 @@ import style from './articleDetails.module.scss';
 
 interface ArticleDetailsProps {
   className?: string;
-  id: string;
+  id?: string;
 }
 
 const reducers: ReducersList = {

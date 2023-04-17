@@ -11,7 +11,6 @@ import {
 import { Page } from 'widgets/Page/Page';
 import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'features/ArticleRecommendationsList';
-import { Text } from 'shared/ui/Text/Text';
 
 import { articleDetailsCommentsReducer } from '../../model/slices/articleDetailsCommentsSlice';
 import ArticleDetailsPageHeader from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -31,14 +30,6 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const { t } = useTranslation('article-details');
 
   const { id } = useParams<{ id: string }>();
-
-  if (!id) {
-    return (
-      <Page className={classNames(style.articleDetailsPage, {}, [className])}>
-        <Text text={t('Article not found')} />
-      </Page>
-    );
-  }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
