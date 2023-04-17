@@ -6,7 +6,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Text } from 'shared/ui/Text/Text';
-import { HStack, VStack } from 'shared/ui/Stack';
+import { VStack } from 'shared/ui/Stack';
 
 import { Comment } from '../../model/types/comment';
 
@@ -24,17 +24,16 @@ export const CommentCard = memo((props: CommentCardProps) => {
   if (isLoading) {
     return (
       <VStack
-        gap='16'
-        max
+        gap='8'
         className={classNames(style.commentCard, {}, [
           className,
           style.loading,
         ])}
       >
-        <HStack gap='8'>
+        <div className={style.header}>
           <Skeleton width={30} height={30} border='50%' />
-          <Skeleton width={100} height={16} />
-        </HStack>
+          <Skeleton width={100} height={16} className={style.username} />
+        </div>
         <Skeleton className={style.text} width='100%' height={50} />
       </VStack>
     );
