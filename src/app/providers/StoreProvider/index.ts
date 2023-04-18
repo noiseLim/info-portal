@@ -1,16 +1,8 @@
-import { createReduxStore, AppDispatch } from './config/store';
-import { StoreProvider } from './ui/StoreProvider';
-import type {
+export type { AppDispatch } from './config/store';
+export { createReduxStore } from './config/store';
+export { StoreProvider } from './ui/StoreProvider';
+export type {
   ReduxStoreWithManager,
   StateSchema,
   ThunkConfig,
 } from './config/StateSchema';
-
-export {
-  StoreProvider,
-  createReduxStore,
-  StateSchema,
-  ReduxStoreWithManager,
-  AppDispatch,
-  ThunkConfig,
-};

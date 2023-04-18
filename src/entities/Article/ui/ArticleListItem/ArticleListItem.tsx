@@ -11,13 +11,12 @@ import { Button } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 
+import { ArtickleTextBlock, Article } from '../../model/types/article';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
-  ArtickleTextBlock,
-  Article,
   ArticleBlockType,
   ArticleView,
-} from '../../model/types/article';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+} from '../../model/consts/articleConsts';
 
 import style from './articleListItem.module.scss';
 

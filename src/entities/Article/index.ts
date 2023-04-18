@@ -4,13 +4,15 @@ export { ArticleViewSelector } from './ui/ArticleViewSelector/ArticleViewSelecto
 export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 
+export type { Article } from './model/types/article';
+export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+
 export {
-  Article,
   ArticleView,
   ArticleSortField,
   ArticleType,
-} from './model/types/article';
-export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
+  ArticleBlockType,
+} from './model/consts/articleConsts';
 
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData';
 export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEditArticle';

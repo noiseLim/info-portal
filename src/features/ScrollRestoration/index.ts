@@ -1,4 +1,4 @@
-export { ScrollRestorationSchema } from './model/types/ScrollRestorationSchema';
+export type { ScrollRestorationSchema } from './model/types/ScrollRestorationSchema';
 
 export { getScrollRestorationByPath } from './model/selectors/getScrollRestorationByPath/getScrollRestorationByPath';
 

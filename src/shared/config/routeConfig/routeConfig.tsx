@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { RouteProps } from 'react-router-dom';
 
-import { UserRole } from 'entities/User/model/types/user';
 import { AboutPage } from 'pages/AboutPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
@@ -11,6 +10,7 @@ import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
 import { ArticleEditPage } from 'pages/ArticleEditPage';
 import { AdminPanelPage } from 'pages/AdminPanelPage';
 import { ForbiddenPage } from 'pages/ForbiddenPage';
+import { UserRole } from 'entities/User';
 
 export type AppRoutesProps = RouteProps & {
   authOnly?: boolean;

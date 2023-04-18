@@ -4,10 +4,10 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 
 import { ArticleDetails } from './ArticleDetails';
 import {
-  Article,
   ArticleBlockType,
   ArticleType,
-} from '../../model/types/article';
+} from '../../model/consts/articleConsts';
+import { Article } from '../../model/types/article';
 
 export default {
   title: 'entities/Article/ArticleDetails',

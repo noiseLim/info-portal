@@ -5,7 +5,7 @@ import { Profile } from 'entities/Profile';
 
 import { getProfileForm } from '../../selectors/getProfileForm/getProfileForm';
 import { validateProfileData } from '../validateProfileData/validateProfileData';
-import { ValidateProfileError } from '../../types/editableProfileCardSchema';
+import { ValidateProfileError } from '../../consts/editableProfileCardConsts';
 
 export const updateProfileData = createAsyncThunk<
   Profile,
