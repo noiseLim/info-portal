@@ -26,5 +26,7 @@
   "There are no comments": "Комментарии отсутствуют",
   "Enter the comment text": "Введите текст комментария",
   "Send": "Отправить",
-  "Create an article": "Создать статью"
+  "Create an article": "Создать статью",
+  "Admin": "Админка",
+  "You do not have access": "У вас нет доступа"
 }

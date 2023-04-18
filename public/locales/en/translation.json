@@ -27,5 +27,7 @@
   "Enter the comment text": "Enter the comment text",
   "Send": "Send",
   "My App": "My App",
-  "Create an article": "Create an article"
+  "Create an article": "Create an article",
+  "Admin": "Admin",
+  "You do not have access": "You don't have access"
 }

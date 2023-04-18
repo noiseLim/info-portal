@@ -1526,13 +1526,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
+      "roles": ["ADMIN"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
     }
   ],
   "profile": [
@@ -1557,6 +1566,17 @@
       "city": "Moscow",
       "username": "user",
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
+    },
+    {
+      "id": "3",
+      "first": "Дмитрий",
+      "lastname": "Сидоров",
+      "age": 33,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "manager",
+      "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
     }
   ]
 }
