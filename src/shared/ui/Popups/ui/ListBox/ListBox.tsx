@@ -4,10 +4,12 @@ import { Listbox as HListBox } from '@headlessui/react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 
-import { Button } from '../Button/Button';
-import { HStack } from '../Stack';
+import { Button } from '../../../Button/Button';
+import { HStack } from '../../../Stack';
+import { mapDirectionClass } from '../../styles/consts';
 
 import style from './listBox.module.scss';
+import popupStyle from '../../styles/popup.module.scss';
 
 export interface ListBoxItem {
   value: string;
@@ -26,13 +28,6 @@ interface ListBoxProps {
   label?: string;
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'top left': style.optionsTopLeft,
-  'top right': style.optionsTopRight,
-  'bottom left': style.optionsBottonLeft,
-  'bottom right': style.optionsBottomRight,
-};
-
 export function ListBox(props: ListBoxProps) {
   const {
     className,
@@ -50,7 +45,10 @@ export function ListBox(props: ListBoxProps) {
   return (
     <HStack
       gap='4'
-      className={classNames('', { [style.readonly]: readonly }, [className])}
+      className={classNames('', { [style.readonly]: readonly }, [
+        className,
+        popupStyle.popup,
+      ])}
     >
       {label && <span>{`${label}>`}</span>}
       <HListBox
@@ -76,8 +74,8 @@ export function ListBox(props: ListBoxProps) {
               {({ active, selected }) => (
                 <li
                   className={classNames(style.item, {
-                    [style.active]: active,
-                    [style.disabled]: item.disabled,
+                    [popupStyle.active]: active,
+                    [popupStyle.disabled]: item.disabled,
                   })}
                 >
                   {selected && '!!!'}

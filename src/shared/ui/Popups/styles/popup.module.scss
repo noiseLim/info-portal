@@ -1,26 +1,18 @@
-.listBox {
+.popup {
   position: relative;
-}
-
-.options {
-  position: absolute;
-  z-index: 10000;
-  background: var(--listbox-bg);
-  border-radius: 12px;
-  box-shadow: 4px 4px 8px var(--listbox-bg);
-}
-
-.item {
-  padding: 10px 20px;
 }
 
 .active {
   background: var(--inverted-primary-color);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 .disabled {
   opacity: 0.7;
+}
+
+.trigger {
+  cursor: pointer;
 }
 
 .optionsTopLeft {
@@ -41,8 +33,4 @@
 .optionsBottomRight {
   top: 100%;
   left: 0;
-}
-
-.readonly {
-  opacity: 0.7;
 }

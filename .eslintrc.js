@@ -54,6 +54,7 @@ module.exports = {
           'data-testid',
           'to',
           'target',
+          'border',
           'justify',
           'align',
           'direction',
