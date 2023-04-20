@@ -1,6 +1,5 @@
 import {
   ReactNode,
-  MouseEvent,
   useState,
   useRef,
   useEffect,
@@ -10,7 +9,9 @@ import {
 
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
+
 import { Portal } from '../Portal/Portal';
+import { Overlay } from '../Overlay/Overlay';
 
 import style from './modal.module.scss';
 
@@ -68,10 +69,6 @@ export const Modal = (props: ModalProps) => {
     };
   }, [isOpen, onKeyDown]);
 
-  const onContentClick = (e: MouseEvent) => {
-    e.stopPropagation();
-  };
-
   const mods: Mods = {
     [style.opened]: isOpen,
     [style.isClosing]: isClosing,
@@ -90,11 +87,8 @@ export const Modal = (props: ModalProps) => {
           'app_modal',
         ])}
       >
-        <div className={style.overlay} onClick={closeHandler}>
-          <div className={style.content} onClick={onContentClick}>
-            {children}
-          </div>
-        </div>
+        <Overlay onClick={closeHandler} />
+        <div className={style.content}>{children}</div>
       </div>
     </Portal>
   );
