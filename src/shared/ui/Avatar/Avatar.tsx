@@ -1,6 +1,6 @@
 import { CSSProperties, useMemo } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 import defaultAvatar from '../../assets/icons/default-avatar.png';
 

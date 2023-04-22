@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { memo } from 'react';
 
-import { Additional, classNames } from 'shared/lib/classNames/classNames';
+import { Additional, classNames } from '@/shared/lib/classNames/classNames';
 
 import style from './text.module.scss';
 

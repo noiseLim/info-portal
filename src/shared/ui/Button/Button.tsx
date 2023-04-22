@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
 
-import { Additional, classNames, Mods } from 'shared/lib/classNames/classNames';
+import { Additional, classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import style from './button.module.scss';
 

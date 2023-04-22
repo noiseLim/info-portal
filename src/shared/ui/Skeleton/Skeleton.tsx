@@ -1,6 +1,6 @@
 import { CSSProperties, memo } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 import style from './skeleton.module.scss';
 
