@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { VStack } from '@/shared/ui/Stack';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 
-import { useNotifications } from '../../api/notificationApi';
+import { useGetNotifications } from '../../api/notificationApi';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 
 import style from './notificationList.module.scss';
@@ -16,7 +16,7 @@ interface NotificationListProps {
 export const NotificationList = memo((props: NotificationListProps) => {
   const { className } = props;
 
-  const { data, isLoading } = useNotifications(null, {
+  const { data, isLoading } = useGetNotifications(null, {
     pollingInterval: 300000,
   });
 

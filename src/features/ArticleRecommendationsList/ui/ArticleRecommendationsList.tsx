@@ -6,7 +6,7 @@ import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { ArticleList } from '@/entities/Article';
 import { VStack } from '@/shared/ui/Stack';
 
-import { useArticleRecommendationsList } from '../api/articleRecommendationsApi';
+import { useGetArticleRecommendationsList } from '../api/articleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {
   className?: string;
@@ -22,7 +22,7 @@ export const ArticleRecommendationsList = memo(
       isLoading,
       data: articles,
       error,
-    } = useArticleRecommendationsList(3);
+    } = useGetArticleRecommendationsList(3);
 
     if (isLoading || error || !articles) {
       return null;
