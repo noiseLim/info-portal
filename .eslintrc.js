@@ -75,7 +75,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'function-paren-newline': 'off',
-    'noiselim-plugin/path-checker': 'error',
+    'noiselim-plugin/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
