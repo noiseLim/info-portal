@@ -10,7 +10,7 @@
       "import { memo } from 'react';",
       "import { useTranslation } from 'react-i18next';",
       "",
-      "import { classNames } from 'shared/lib/classNames/classNames';",
+      "import { classNames } from '@/shared/lib/classNames/classNames';",
       "",
       "import style from './<FTName | camelcase>.module.scss';",
       "",
@@ -71,7 +71,7 @@
       ""
     ],
     "Redux selector file": [
-      "import { StateSchema } from 'app/providers/StoreProvider';",
+      "import { StateSchema } from '@/app/providers/StoreProvider';",
       "",
       "export const get<FTName>= (state: StateSchema) => state;",
       ""
