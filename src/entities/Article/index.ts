@@ -16,5 +16,3 @@ export {
 
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData';
 export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEditArticle';
-
-export { articleDetailsReducer } from './model/slice/articleDetailsSlice';

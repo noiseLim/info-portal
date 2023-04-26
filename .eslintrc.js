@@ -76,7 +76,17 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'function-paren-newline': 'off',
     'noiselim-plugin/path-checker': ['error', { alias: '@' }],
-    'noiselim-plugin/public-api-imports': ['error', { alias: '@' }],
+    'noiselim-plugin/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.stories.*',
+          '**/StoreDecorator.tsx',
+        ],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,

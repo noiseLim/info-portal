@@ -2,5 +2,3 @@ export { ArticleDetailsPageAsync as ArticleDetailsPage } from './ui/ArticleDetai
 
 export type { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
 export type { ArticleDetailsPageSchema } from './model/types';
-
-export { articleDetailsCommentsReducer } from './model/slices/articleDetailsCommentsSlice';
