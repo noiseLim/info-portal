@@ -87,6 +87,13 @@ module.exports = {
         ],
       },
     ],
+    'noiselim-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
