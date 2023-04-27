@@ -12,7 +12,7 @@ import {
 } from '@/entities/User';
 import { Dropdown } from '@/shared/ui/Popups';
 import { RoutePath } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Avatar } from '@/shared/ui/Avatar';
 
 interface AvatarDropdownProps {
   className?: string;
