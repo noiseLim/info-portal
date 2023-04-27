@@ -38,12 +38,7 @@ export default {
     '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     // Поддержка Aliases
-    '^@/shared(.*)$': '<rootDir>/src/shared$1',
-    '^@/entities(.*)$': '<rootDir>/src/entities$1',
-    '^@/features(.*)$': '<rootDir>/src/features$1',
-    '^@/widgets(.*)$': '<rootDir>/src/widgets$1',
-    '^@/pages(.*)$': '<rootDir>/src/pages$1',
-    '^@/app(.*)$': '<rootDir>/src/app$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
 
   // An array of file extensions your modules use
