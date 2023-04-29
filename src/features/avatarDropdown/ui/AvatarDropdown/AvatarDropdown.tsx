@@ -11,7 +11,7 @@ import {
   userActions,
 } from '@/entities/User';
 import { Dropdown } from '@/shared/ui/Popups';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { Avatar } from '@/shared/ui/Avatar';
 
 interface AvatarDropdownProps {
@@ -43,9 +43,9 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
       className={classNames('', {}, [className])}
       items={[
         ...(isAdminPanelAailable
-          ? [{ content: t('Admin'), href: RoutePath.admin_panel }]
+          ? [{ content: t('Admin'), href: getRouteAdminPanel() }]
           : []),
-        { content: t('Profile'), href: RoutePath.profile + authData.id },
+        { content: t('Profile'), href: getRouteProfile(authData.id) },
         { content: t('Logout'), onClick: onLogout },
       ]}
       trigger={<Avatar size={30} src={authData.avatar} />}
