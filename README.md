@@ -197,3 +197,6 @@ Clear.args = {
 - [profileRating](/src/features/profileRating)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [ScrollRestoration](/src/features/ScrollRestoration)
+- [ArticleSortSelector](/src/features/ArticleSortSelector)
+- [ArticleTypeTabs](/src/features/ArticleTypeTabs)
+- [ArticleViewSelector](/src/features/ArticleViewSelector)
