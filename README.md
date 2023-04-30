@@ -29,6 +29,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run test:ui:html` - Генерация HTML отчета для скриншотных тестов
 - `npm run storybook` - запуск Storybook
 - `npm run storybook:build` - Сборка storybook билда
+- `npm run postinstall` - Удаляет папку .cache в node_modules после установки/обновления любого npm пакета
 
 ---
 
