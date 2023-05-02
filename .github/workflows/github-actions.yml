@@ -104,14 +104,19 @@ jobs:
         run: npm run storybook:build
       - name: screenshot testing
         run: npm run test:ui:ci
+        if: always()
       - name: Generate HTML report
         run: npm run test:ui:report
+        if: always()
       - name: Setup Pages
         uses: actions/configure-pages@v2
+        if: always()
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        if: always()
         with:
           path: '.loki'
       - name: Deploy to GitHub Pages
         id: deployment
+        if: always()
         uses: actions/deploy-pages@v1
