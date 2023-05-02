@@ -3,7 +3,7 @@
 node_modules
 .idea
 /storybook-static
-/reports
+/reports/unit
 
 #files
 .DS_Store
