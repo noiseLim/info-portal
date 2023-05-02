@@ -11,11 +11,12 @@ import {
 } from '@/features/ScrollRestoration';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { StateSchema } from '@/app/providers/StoreProvider';
-
 import { useTrottle } from '@/shared/lib/hooks/useTrottle/useTrottle';
+import { TestProps } from '@/shared/types/tests';
+
 import style from './page.module.scss';
 
-interface PageProps {
+interface PageProps extends TestProps {
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
@@ -62,6 +63,8 @@ export const Page = (props: PageProps) => {
       ref={wrapperRef}
       onScroll={onScroll}
       id={PAGE_ID}
+      // eslint-disable-next-line react/destructuring-assignment
+      data-testid={props['data-testid'] ?? 'Page'}
     >
       {children}
       {onScrollEnd ? <div className={style.trigger} ref={triggerRef} /> : null}

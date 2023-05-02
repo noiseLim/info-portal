@@ -5,5 +5,5 @@ import { Page } from '@/widgets/Page';
 
 export const ForbiddenPage = memo((props) => {
   const { t } = useTranslation();
-  return <Page>{t('You do not have access')}</Page>;
+  return <Page data-testid='ForbiddenPage'>{t('You do not have access')}</Page>;
 });
