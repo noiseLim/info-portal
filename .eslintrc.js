@@ -24,7 +24,9 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [
       2,
-      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
@@ -65,9 +67,18 @@ module.exports = {
     ],
     'max-len': [
       'error',
-      { ignoreComments: true, ignoreStrings: true, code: 120 },
+      {
+        ignoreComments: true,
+        ignoreStrings: true,
+        code: 120,
+      },
     ],
-    'react/jsx-wrap-multilines': ['error', { prop: false }],
+    'react/jsx-wrap-multilines': [
+      'error',
+      {
+        prop: false,
+      },
+    ],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -76,7 +87,12 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'function-paren-newline': 'off',
-    'noiselim-plugin/path-checker': ['error', { alias: '@' }],
+    'noiselim-plugin/path-checker': [
+      'error',
+      {
+        alias: '@',
+      },
+    ],
     'noiselim-plugin/public-api-imports': [
       'error',
       {
