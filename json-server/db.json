@@ -1570,6 +1570,15 @@
         "MANAGER"
       ],
       "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://www.freecodecamp.org/news/content/images/2022/01/IMG_1763.jpg"
     }
   ],
   "profile": [
