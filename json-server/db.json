@@ -1473,6 +1473,32 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология все любят!",
+      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
+      "views": 13901,
+      "createdAt": "02.02.2023",
+      "userId": "2",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "WIFWgf2"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология все любят!",
+      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
+      "views": 13901,
+      "createdAt": "02.02.2023",
+      "userId": "2",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "7bL-Kbx"
     }
   ],
   "comments": [
@@ -1614,6 +1640,17 @@
       "city": "Moscow",
       "username": "manager",
       "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Игнат",
+      "lastname": "Тестов",
+      "age": 16,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "testuser",
+      "avatar": "https://www.freecodecamp.org/news/content/images/2022/01/IMG_1763.jpg"
     }
   ],
   "article-ratings": [
