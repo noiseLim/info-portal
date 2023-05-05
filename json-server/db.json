@@ -42,9 +42,7 @@
       "views": 100022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -114,9 +112,7 @@
       "views": 103,
       "createdAt": "20.03.2022",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -186,9 +182,7 @@
       "views": 5014,
       "createdAt": "10.02.2021",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -258,9 +252,7 @@
       "views": 10342,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -330,9 +322,7 @@
       "views": 143,
       "createdAt": "04.10.2020",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -402,9 +392,7 @@
       "views": 5011,
       "createdAt": "24.12.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -474,9 +462,7 @@
       "views": 4522,
       "createdAt": "29.11.2020",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -546,9 +532,7 @@
       "views": 10903,
       "createdAt": "01.04.2023",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -618,9 +602,7 @@
       "views": 5001,
       "createdAt": "20.02.2019",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -690,9 +672,7 @@
       "views": 132,
       "createdAt": "09.09.2022",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -762,9 +742,7 @@
       "views": 1031,
       "createdAt": "22.06.2022",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -834,9 +812,7 @@
       "views": 2301,
       "createdAt": "27.02.2021",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -906,9 +882,7 @@
       "views": 12,
       "createdAt": "13.07.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -978,9 +952,7 @@
       "views": 10300,
       "createdAt": "02.03.2022",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -1050,9 +1022,7 @@
       "views": 5031,
       "createdAt": "30.02.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -1122,9 +1092,7 @@
       "views": 2302,
       "createdAt": "11.08.2020",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -1194,9 +1162,7 @@
       "views": 10223,
       "createdAt": "20.12.2022",
       "userId": "2",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -1266,9 +1232,7 @@
       "views": 50901,
       "createdAt": "04.04.2022",
       "userId": "1",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -1338,9 +1302,7 @@
       "views": 9901,
       "createdAt": "15.05.2023",
       "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
+      "type": ["ECONOMICS"],
       "blocks": [
         {
           "id": "1",
@@ -1410,9 +1372,7 @@
       "views": 13901,
       "createdAt": "02.02.2023",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [
         {
           "id": "1",
@@ -1481,9 +1441,7 @@
       "views": 13901,
       "createdAt": "02.02.2023",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [],
       "id": "WIFWgf2"
     },
@@ -1494,9 +1452,7 @@
       "views": 13901,
       "createdAt": "02.02.2023",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [],
       "id": "7bL-Kbx"
     },
@@ -1507,9 +1463,7 @@
       "views": 13901,
       "createdAt": "02.02.2023",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [],
       "id": "foyA2UN"
     },
@@ -1520,9 +1474,7 @@
       "views": 13901,
       "createdAt": "02.02.2023",
       "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
+      "type": ["SCIENCE"],
       "blocks": [],
       "id": "yRw60cO"
     }
@@ -1600,36 +1552,28 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": [
-        "MANAGER"
-      ],
+      "roles": ["MANAGER"],
       "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
     },
     {
       "id": "4",
       "username": "testuser",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://www.freecodecamp.org/news/content/images/2022/01/IMG_1763.jpg"
     }
   ],

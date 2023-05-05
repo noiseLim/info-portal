@@ -7,9 +7,7 @@
     "views": 10903,
     "createdAt": "01.04.2023",
     "userId": "2",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -74,9 +72,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -88,9 +84,7 @@
     "views": 13901,
     "createdAt": "02.02.2023",
     "userId": "2",
-    "type": [
-      "SCIENCE"
-    ],
+    "type": ["SCIENCE"],
     "blocks": [
       {
         "id": "1",
@@ -155,9 +149,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -168,18 +160,14 @@
     "views": 13901,
     "createdAt": "02.02.2023",
     "userId": "2",
-    "type": [
-      "SCIENCE"
-    ],
+    "type": ["SCIENCE"],
     "blocks": [],
     "id": "WIFWgf2",
     "user": {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -190,18 +178,14 @@
     "views": 13901,
     "createdAt": "02.02.2023",
     "userId": "2",
-    "type": [
-      "SCIENCE"
-    ],
+    "type": ["SCIENCE"],
     "blocks": [],
     "id": "7bL-Kbx",
     "user": {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -213,9 +197,7 @@
     "views": 10300,
     "createdAt": "02.03.2022",
     "userId": "2",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -280,9 +262,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -294,9 +274,7 @@
     "views": 50901,
     "createdAt": "04.04.2022",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -361,9 +339,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     }
   },
@@ -375,9 +351,7 @@
     "views": 143,
     "createdAt": "04.10.2020",
     "userId": "2",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -442,9 +416,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -456,9 +428,7 @@
     "views": 132,
     "createdAt": "09.09.2022",
     "userId": "2",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -523,9 +493,7 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": [
-        "USER"
-      ],
+      "roles": ["USER"],
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     }
   },
@@ -537,9 +505,7 @@
     "views": 5014,
     "createdAt": "10.02.2021",
     "userId": "1",
-    "type": [
-      "IT"
-    ],
+    "type": ["IT"],
     "blocks": [
       {
         "id": "1",
@@ -604,9 +570,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
+      "roles": ["ADMIN"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     }
   }

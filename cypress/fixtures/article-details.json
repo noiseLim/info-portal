@@ -6,9 +6,7 @@
   "views": 10903,
   "createdAt": "01.04.2023",
   "userId": "2",
-  "type": [
-    "IT"
-  ],
+  "type": ["IT"],
   "blocks": [
     {
       "id": "1",
@@ -73,9 +71,7 @@
     "id": "2",
     "username": "user",
     "password": "123",
-    "roles": [
-      "USER"
-    ],
+    "roles": ["USER"],
     "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
   }
 }

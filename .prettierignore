@@ -1,1 +1,4 @@
+# Ignore artifacts:
 .vscode
+build
+coverage
