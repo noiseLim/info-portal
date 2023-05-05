@@ -1499,6 +1499,32 @@
       ],
       "blocks": [],
       "id": "7bL-Kbx"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология все любят!",
+      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
+      "views": 13901,
+      "createdAt": "02.02.2023",
+      "userId": "2",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "foyA2UN"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология все любят!",
+      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
+      "views": 13901,
+      "createdAt": "02.02.2023",
+      "userId": "2",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "yRw60cO"
     }
   ],
   "comments": [
