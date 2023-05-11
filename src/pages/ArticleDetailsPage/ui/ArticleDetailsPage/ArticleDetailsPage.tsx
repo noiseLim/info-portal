@@ -11,6 +11,7 @@ import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
 import { ArticleRating } from '@/features/articleRating';
+import { getFeatureFlags } from '@/shared/lib/features';
 
 import { articleDetailsCommentsReducer } from '../../model/slices/articleDetailsCommentsSlice';
 import ArticleDetailsPageHeader from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -29,6 +30,11 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const { id } = useParams<{ id: string }>();
 
+  const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled');
+  const isArticleRecommendationsList = getFeatureFlags(
+    'isArticleRecommendationsList'
+  );
+
   if (!id) {
     return null;
   }
@@ -39,8 +45,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         <VStack gap='16' max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          <ArticleRating articleId={id} />
-          <ArticleRecommendationsList />
+          {isArticleRatingEnabled ?? <ArticleRating articleId={id} />}
+          {isArticleRecommendationsList ?? <ArticleRecommendationsList />}
           <ArticleDetailsComments id={id} />
         </VStack>
       </Page>
