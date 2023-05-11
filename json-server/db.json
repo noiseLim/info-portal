@@ -1555,7 +1555,7 @@
       "roles": ["ADMIN"],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleRecommendationsList": false
+        "isArticleRecommendationsListEnabled": false
       },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     },
@@ -1565,8 +1565,8 @@
       "password": "123",
       "roles": ["USER"],
       "features": {
-        "isArticleRatingEnabled": true,
-        "isArticleRecommendationsList": true
+        "isArticleRatingEnabled": false,
+        "isArticleRecommendationsListEnabled": true
       },
       "avatar": "https://img.freepik.com/free-vector/cute-hacker-operating-laptop-cartoon-vector-icon-illustration-people-technology-icon-isolated-flat_138676-7079.jpg?w=2000"
     },
@@ -1576,8 +1576,8 @@
       "password": "123",
       "roles": ["MANAGER"],
       "features": {
-        "isArticleRatingEnabled": false,
-        "isArticleRecommendationsList": true
+        "isArticleRatingEnabled": true,
+        "isArticleRecommendationsListEnabled": true
       },
       "avatar": "https://www.mancosa.co.za/wp-content/uploads/2019/03/shutterstock_531027220.jpg"
     },
@@ -1588,7 +1588,7 @@
       "roles": ["USER"],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleRecommendationsList": true
+        "isArticleRecommendationsListEnabled": true
       },
       "avatar": "https://www.freecodecamp.org/news/content/images/2022/01/IMG_1763.jpg"
     }

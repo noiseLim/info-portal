@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleDetails } from '@/entities/Article';
@@ -11,7 +12,8 @@ import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/ArticleRecommendationsList';
 import { ArticleRating } from '@/features/articleRating';
-import { getFeatureFlags } from '@/shared/lib/features';
+import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features';
+import { Card } from '@/shared/ui/Card';
 
 import { articleDetailsCommentsReducer } from '../../model/slices/articleDetailsCommentsSlice';
 import ArticleDetailsPageHeader from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
@@ -28,16 +30,22 @@ const reducers: ReducersList = {
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
+  const { t } = useTranslation('article-details');
   const { id } = useParams<{ id: string }>();
 
-  const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled');
-  const isArticleRecommendationsList = getFeatureFlags(
-    'isArticleRecommendationsList'
+  const isArticleRecommendationsListEnabled = getFeatureFlags(
+    'isArticleRecommendationsListEnabled'
   );
 
   if (!id) {
     return null;
   }
+
+  const articleRatingCard = toggleFeatures({
+    name: 'isArticleRatingEnabled',
+    on: () => <ArticleRating articleId={id} />,
+    off: () => <Card>{t('Evaluation of articles will appear soon')}</Card>,
+  });
 
   return (
     <DynamicModuleLoader reducers={reducers}>
@@ -45,8 +53,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         <VStack gap='16' max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          {isArticleRatingEnabled ?? <ArticleRating articleId={id} />}
-          {isArticleRecommendationsList ?? <ArticleRecommendationsList />}
+          {articleRatingCard}
+          {isArticleRecommendationsListEnabled && (
+            <ArticleRecommendationsList />
+          )}
           <ArticleDetailsComments id={id} />
         </VStack>
       </Page>
