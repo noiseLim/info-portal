@@ -27,6 +27,7 @@ export const saveJsonSettings = createAsyncThunk<
         jsonSettings: { ...currentSettings, ...newJsonSettings },
       })
     ).unwrap();
+
     if (!response.jsonSettings) {
       return rejectWithValue('');
     }
