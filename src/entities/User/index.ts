@@ -9,3 +9,6 @@ export { getUserInited } from './model/selectors/getUserInited/getUserInited';
 export { getUserRoles } from './model/selectors/getUserRoles/getUserRoles';
 export { getUserIsAdmin } from './model/selectors/getUserIsAdmin/getUserIsAdmin';
 export { getUserIsManager } from './model/selectors/getUserIsManager/getUserIsManager';
+export { useJsonSettings } from './model/selectors/jsonSettings';
+
+export { saveJsonSettings } from './model/services/saveJsonSettings';
