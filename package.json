@@ -26,7 +26,8 @@
     "test:ui:html": "npx reg-cli --from .loki/report.json --report .loki/report.html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
-    "postinstall": "node ./scripts/clear-cache.js"
+    "postinstall": "node ./scripts/clear-cache.js",
+    "remove-feature": "ts-node ./scripts/remove-feature.ts"
   },
   "keywords": [],
   "author": "",
