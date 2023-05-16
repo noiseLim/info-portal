@@ -1605,7 +1605,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isArticleRecommendationsListEnabled": false
+        "isArticleRecommendationsListEnabled": false,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_dark_theme",

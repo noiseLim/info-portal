@@ -13,8 +13,10 @@ import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitial
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useTrottle } from '@/shared/lib/hooks/useTrottle/useTrottle';
 import { TestProps } from '@/shared/types/tests';
+import { toggleFeatures } from '@/shared/lib/features';
 
 import style from './page.module.scss';
+import styleRedesigned from './pageRedesigned.module.scss';
 
 interface PageProps extends TestProps {
   className?: string;
@@ -59,7 +61,15 @@ export const Page = (props: PageProps) => {
 
   return (
     <main
-      className={classNames(style.page, {}, [className])}
+      className={classNames(
+        toggleFeatures({
+          name: 'isAppRedesigned',
+          on: () => styleRedesigned.page,
+          off: () => style.page,
+        }),
+        {},
+        [className]
+      )}
       ref={wrapperRef}
       onScroll={onScroll}
       id={PAGE_ID}
