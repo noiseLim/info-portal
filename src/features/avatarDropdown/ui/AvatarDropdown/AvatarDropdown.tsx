@@ -10,9 +10,9 @@ import {
   getUserIsManager,
   userActions,
 } from '@/entities/User';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/Avatar';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 
 interface AvatarDropdownProps {
   className?: string;
