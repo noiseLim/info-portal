@@ -1,10 +1,56 @@
 .sidebar {
+  position: relative;
   background: var(--light-bg-redesigned);
   width: 220px;
   height: 100%;
   border-radius: 32px;
+  transition: 0.2s;
 }
 
 .appLogo {
-  padding: 20px;
+  padding-top: 20px;
+}
+
+.items {
+  margin-top: 40px;
+}
+
+.collapseBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+  transform: rotate(90deg);
+}
+
+.switchers {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.collapsed {
+  width: 50px;
+
+  .switchers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .lang {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    transition: 0.8s opacity;
+  }
 }

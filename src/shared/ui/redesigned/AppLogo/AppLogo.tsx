@@ -3,19 +3,17 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import AppSvg from '@/shared/assets/icons/app-image.svg';
 
-import { HStack } from '../Stack';
+import { HStack } from '../../deprecated/Stack';
 
 import style from './appLogo.module.scss';
 
 interface AppLogoProps {
   className?: string;
+  size?: number;
 }
 
-/**
- * @deprecated
- */
 export const AppLogo = memo((props: AppLogoProps) => {
-  const { className } = props;
+  const { className, size = 50 } = props;
 
   return (
     <HStack
@@ -25,7 +23,12 @@ export const AppLogo = memo((props: AppLogoProps) => {
     >
       <div className={style.gradientBig} />
       <div className={style.gradientSmall} />
-      <AppSvg className={style.appLogo} />
+      <AppSvg
+        className={style.appLogo}
+        width={size}
+        height={size}
+        color='black'
+      />
     </HStack>
   );
 });
