@@ -50,9 +50,6 @@ export interface FlexProps extends DivProps {
   max?: boolean;
 }
 
-/**
- * @deprecated
- */
 export const Flex = (props: FlexProps) => {
   const {
     className,
@@ -65,6 +62,10 @@ export const Flex = (props: FlexProps) => {
     ...otherProps
   } = props;
 
+  const mods = {
+    [style.max]: max,
+  };
+
   const additional = [
     className,
     justifyClasses[justify],
@@ -72,10 +73,6 @@ export const Flex = (props: FlexProps) => {
     directionClasses[direction],
     gap && gapClasses[gap],
   ];
-
-  const mods = {
-    [style.max]: max,
-  };
 
   return (
     <div {...otherProps} className={classNames(style.flex, mods, additional)}>

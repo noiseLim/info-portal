@@ -10,9 +10,12 @@ import {
   getUserIsManager,
   userActions,
 } from '@/entities/User';
-import { Dropdown } from '@/shared/ui/deprecated/Popups';
+import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
+import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
+import { Avatar } from '@/shared/ui/redesigned/Avatar';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 interface AvatarDropdownProps {
   className?: string;
@@ -38,18 +41,39 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
     return null;
   }
 
+  const items = [
+    ...(isAdminPanelAailable
+      ? [{ content: t('Admin'), href: getRouteAdminPanel() }]
+      : []),
+    { content: t('Profile'), href: getRouteProfile(authData.id) },
+    { content: t('Logout'), onClick: onLogout },
+  ];
+
   return (
-    <Dropdown
-      className={classNames('', {}, [className])}
-      items={[
-        ...(isAdminPanelAailable
-          ? [{ content: t('Admin'), href: getRouteAdminPanel() }]
-          : []),
-        { content: t('Profile'), href: getRouteProfile(authData.id) },
-        { content: t('Logout'), onClick: onLogout },
-      ]}
-      trigger={<Avatar size={30} src={authData.avatar} fallbackInverted />}
-      direction='bottom left'
+    <ToggleFeatures
+      feature='isAppRedesigned'
+      on={
+        <Dropdown
+          className={classNames('', {}, [className])}
+          items={items}
+          trigger={<Avatar size={40} src={authData.avatar} />}
+          direction='bottom left'
+        />
+      }
+      off={
+        <DropdownDeprecated
+          className={classNames('', {}, [className])}
+          items={items}
+          trigger={
+            <AvatarDeprecated
+              size={30}
+              src={authData.avatar}
+              fallbackInverted
+            />
+          }
+          direction='bottom left'
+        />
+      }
     />
   );
 });

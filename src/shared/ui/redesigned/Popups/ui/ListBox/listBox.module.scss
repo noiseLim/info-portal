@@ -1,0 +1,15 @@
+.options {
+  position: absolute;
+  z-index: 10000;
+  background: var(--dark-bg-redesigned);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px var(--dark-bg-redesigned);
+}
+
+.item {
+  padding: 10px 20px;
+}
+
+.readonly {
+  opacity: 0.7;
+}

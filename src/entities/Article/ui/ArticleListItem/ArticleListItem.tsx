@@ -10,7 +10,7 @@ import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Button } from '@/shared/ui/deprecated/Button';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/deprecated/AppLink';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 
 import { ArtickleTextBlock, Article } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
