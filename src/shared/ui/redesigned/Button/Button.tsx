@@ -10,7 +10,6 @@ import {
 import style from './button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled';
-
 export type ButtonSize = 'm' | 'l' | 'xl';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,6 +20,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   children?: ReactNode;
   fullWidth?: boolean;
+  addonLeft?: ReactNode;
+  addonRight?: ReactNode;
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -32,6 +33,8 @@ export const Button = memo((props: ButtonProps) => {
     size = 'm',
     disabled,
     fullWidth,
+    addonLeft,
+    addonRight,
     ...otherProps
   } = props;
 
@@ -39,6 +42,7 @@ export const Button = memo((props: ButtonProps) => {
     [style.square]: square,
     [style.disabled]: disabled,
     [style.fullWidth]: fullWidth,
+    [style.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
   };
 
   const additional: Additional = [className, style[variant], style[size]];
@@ -50,7 +54,9 @@ export const Button = memo((props: ButtonProps) => {
       className={classNames(style.button, mods, additional)}
       disabled={disabled}
     >
+      <div className={style.addonLeft}>{addonLeft}</div>
       {children}
+      <div className={style.addonRight}>{addonRight}</div>
     </button>
   );
 });
