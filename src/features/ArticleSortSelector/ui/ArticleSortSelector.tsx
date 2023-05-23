@@ -5,6 +5,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOption } from '@/shared/ui/deprecated/Select';
 import { SortOrder } from '@/shared/types/sort';
 import { ArticleSortField } from '@/entities/Article';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { ListBox } from '@/shared/ui/redesigned/Popups';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 import style from './articleSortSelector.module.scss';
 
@@ -54,20 +58,42 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
   );
 
   return (
-    <div className={classNames(style.articleSortSelector, {}, [className])}>
-      <Select
-        options={sortFieldOptions}
-        label={t('Sort by')}
-        value={sort}
-        onChange={onChangeSort}
-      />
-      <Select
-        className={style.order}
-        options={orderOptions}
-        label={t('In')}
-        value={order}
-        onChange={onChangeOrder}
-      />
-    </div>
+    <ToggleFeatures
+      feature='isAppRedesigned'
+      on={
+        <div className={classNames(style.articleSortSelector, {}, [className])}>
+          <VStack gap='8'>
+            <Text text={t('Sort by')} />
+            <ListBox
+              items={sortFieldOptions}
+              value={sort}
+              onChange={onChangeSort}
+            />
+            <ListBox
+              items={orderOptions}
+              value={order}
+              onChange={onChangeOrder}
+            />
+          </VStack>
+        </div>
+      }
+      off={
+        <div className={classNames(style.articleSortSelector, {}, [className])}>
+          <Select
+            options={sortFieldOptions}
+            label={t('Sort by')}
+            value={sort}
+            onChange={onChangeSort}
+          />
+          <Select
+            className={style.order}
+            options={orderOptions}
+            label={t('In')}
+            value={order}
+            onChange={onChangeOrder}
+          />
+        </div>
+      }
+    />
   );
 });

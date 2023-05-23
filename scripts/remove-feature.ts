@@ -124,6 +124,7 @@ const replaceComponent = (node: Node) => {
 };
 
 files.forEach((sourceFile) => {
+  // eslint-disable-next-line consistent-return
   sourceFile.forEachDescendant((node) => {
     if (node.isKind(SyntaxKind.CallExpression) && isToggleFunction(node)) {
       return replaceToggleFunction(node);

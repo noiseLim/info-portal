@@ -1,6 +1,5 @@
 .card {
   padding: 24px;
-  border-radius: 12px;
   background: var(--card-bg);
 }
 
@@ -10,6 +9,10 @@
 
 .normal {
   background: var(--dark-bg-redesigned);
+}
+
+.light {
+  background: var(--light-bg-redesigned);
 }
 
 .outlined {
@@ -34,4 +37,12 @@
 
 .padding_24 {
   padding: 24px;
+}
+
+.regular {
+  border-radius: 12px;
+}
+
+.round {
+  border-radius: 40px;
 }
