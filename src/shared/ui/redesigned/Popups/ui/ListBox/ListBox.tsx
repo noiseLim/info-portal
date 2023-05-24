@@ -39,7 +39,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
     defaultValue,
     onChange,
     readonly,
-    direction = 'bottom right',
+    direction = 'bottom left',
     label,
   } = props;
 
@@ -50,16 +50,13 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
   }, [items, value]);
 
   return (
-    <HStack
-      gap='4'
-      className={classNames('', { [style.readonly]: readonly }, [
-        className,
-        popupStyle.popup,
-      ])}
-    >
+    <HStack gap='4'>
       {label && <span>{`${label}>`}</span>}
       <HListBox
-        className={classNames(style.listBox, {}, [className])}
+        className={classNames(style.listBox, { [style.readonly]: readonly }, [
+          className,
+          popupStyle.popup,
+        ])}
         as='div'
         value={value}
         onChange={onChange}

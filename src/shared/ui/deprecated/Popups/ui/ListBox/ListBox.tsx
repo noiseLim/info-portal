@@ -48,14 +48,11 @@ export function ListBox(props: ListBoxProps) {
   return (
     <HStack
       gap='4'
-      className={classNames('', { [style.readonly]: readonly }, [
-        className,
-        popupStyle.popup,
-      ])}
+      className={classNames('', { [style.readonly]: readonly }, [])}
     >
       {label && <span>{`${label}>`}</span>}
       <HListBox
-        className={classNames(style.listBox, {}, [className])}
+        className={classNames(style.listBox, {}, [className, popupStyle.popup])}
         as='div'
         value={value}
         onChange={onChange}
