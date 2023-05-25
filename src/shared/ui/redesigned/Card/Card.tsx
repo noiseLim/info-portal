@@ -20,6 +20,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   max?: boolean;
   padding?: CardPadding;
   border?: CardBorder;
+  fullHeight?: boolean;
 }
 
 const mapPaddintToClass: Record<CardPadding, string> = {
@@ -37,6 +38,7 @@ export const Card = (props: CardProps) => {
     max,
     padding = '8',
     border = 'regular',
+    fullHeight,
     ...otherProps
   } = props;
 
@@ -44,6 +46,7 @@ export const Card = (props: CardProps) => {
 
   const mods: Mods = {
     [style.max]: max,
+    [style.fullHeight]: fullHeight,
   };
 
   const additional: Additional = [

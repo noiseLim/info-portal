@@ -7,5 +7,9 @@
   "We recommend": "Рекомендуем",
   "Editing an article with an ID": "Редактирование статьи с ID - ",
   "Creating a new article": "Создание новой статьи",
-  "Evaluation of articles will appear soon": "Оценка статей скоро появится!"
+  "Evaluation of articles will appear soon": "Оценка статей скоро появится!",
+  "{{count}} views_zero": "{{count}} просмотров",
+  "{{count}} views_one": "{{count}} просмотр",
+  "{{count}} views_few": "{{count}} просмотра",
+  "{{count}} views_many": "{{count}} просмотров"
 }
