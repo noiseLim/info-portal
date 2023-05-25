@@ -7,11 +7,11 @@ import { Navbar } from '@/widgets/Navbar';
 import { getUserInited, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { PageLoader } from '@/widgets/PageLoader';
 import { ToggleFeatures } from '@/shared/lib/features';
 
 import { AppRouter } from './providers/router';
 import { MainLayout } from '@/shared/layouts/MainLayout';
+import { PageLoader } from '@/widgets/PageLoader';
 
 const App = () => {
   const { theme } = useTheme();
@@ -31,7 +31,7 @@ const App = () => {
     <ToggleFeatures
       feature='isAppRedesigned'
       on={
-        <div className={classNames('app_redesigned', {}, [theme])}>
+        <div id='app' className={classNames('app_redesigned', {}, [theme])}>
           <Suspense fallback=''>
             <MainLayout
               header={<Navbar />}
@@ -43,7 +43,7 @@ const App = () => {
         </div>
       }
       off={
-        <div className={classNames('app', {}, [theme])}>
+        <div id='app' className={classNames('app', {}, [theme])}>
           <Suspense fallback=''>
             <Navbar />
             <div className='content-page'>
