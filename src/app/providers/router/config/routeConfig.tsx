@@ -8,6 +8,7 @@ import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
 import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { SettingsPage } from '@/pages/SettingsPage';
 import { UserRole } from '@/entities/User';
 import {
   AppRoutes,
@@ -20,6 +21,7 @@ import {
   getRouteForbidden,
   getRouteMain,
   getRouteProfile,
+  getRouteSettings,
 } from '@/shared/const/router';
 import { AppRoutesProps } from '@/shared/types/router';
 
@@ -36,6 +38,10 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     path: getRouteProfile(':id'),
     element: <ProfilePage />,
     authOnly: true,
+  },
+  [AppRoutes.SETTINGS]: {
+    path: getRouteSettings(),
+    element: <SettingsPage />,
   },
   [AppRoutes.ARTICLES]: {
     path: getRouteArticles(),
