@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
@@ -38,18 +40,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
   const { t } = useTranslation('article');
 
-  const renderArticle = (article: Article) => {
-    return (
-      <ArticleListItem
-        className={style.card}
-        article={article}
-        view={view}
-        key={article.id}
-        target={target}
-      />
-    );
-  };
-
   if (!isLoading && !articles.length) {
     return (
       <div className={classNames('', {}, [className, style[view]])}>
@@ -59,12 +49,44 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
-    <div
-      className={classNames('', {}, [className, style[view]])}
-      data-testid='ArticleList'
-    >
-      {articles.length > 0 ? articles.map(renderArticle) : null}
-      {isLoading && getSkeletons(view)}
-    </div>
+    <ToggleFeatures
+      feature='isAppRedesigned'
+      on={
+        <HStack
+          className={classNames('', {}, [])}
+          wrap='wrap'
+          gap='16'
+          data-testid='ArticleList'
+        >
+          {articles.map((item) => (
+            <ArticleListItem
+              className={style.card}
+              article={item}
+              view={view}
+              key={item.id}
+              target={target}
+            />
+          ))}
+          {isLoading && getSkeletons(view)}
+        </HStack>
+      }
+      off={
+        <div
+          className={classNames('', {}, [className, style[view]])}
+          data-testid='ArticleList'
+        >
+          {articles.map((item) => (
+            <ArticleListItem
+              className={style.card}
+              article={item}
+              view={view}
+              key={item.id}
+              target={target}
+            />
+          ))}
+          {isLoading && getSkeletons(view)}
+        </div>
+      }
+    />
   );
 });

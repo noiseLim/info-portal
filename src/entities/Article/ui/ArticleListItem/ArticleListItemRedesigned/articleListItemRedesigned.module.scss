@@ -12,64 +12,29 @@
 }
 
 .TILE {
-  width: 230px;
-  transition: 0.2s;
-  cursor: pointer;
-
-  .date {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  &:hover {
-    opacity: 0.8;
-    transform: scale(1.01);
-
-    .date {
-      display: block;
-    }
-  }
-
-  .imageWrapper {
-    width: 200px;
-    height: 200px;
-    position: relative;
+  .card {
+    width: 240px;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
     object-fit: cover;
+    min-height: 140px;
+    max-height: 140px;
   }
 
-  .infoWrapper {
-    display: flex;
-    margin-top: 8px;
+  .info {
+    padding: 8px 8px 16px;
+    height: 100%;
   }
 
-  .types p {
-    width: 115px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .views {
-    margin-left: auto;
-    margin-right: 8px;
-  }
-
-  .title {
-    margin-top: 8px;
-  }
-
-  .title p {
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 8px;
+  .footer {
+    height: 100%;
+    justify-content: flex-end;
   }
 }

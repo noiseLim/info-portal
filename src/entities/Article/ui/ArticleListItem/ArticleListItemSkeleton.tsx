@@ -20,6 +20,12 @@ export const ArticleListItemSkeleton = memo(
   (props: ArticleListItemSkeletonProps) => {
     const { className, view } = props;
 
+    const mainClass = toggleFeatures({
+      name: 'isAppRedesigned',
+      on: () => style.articleListItemRedesigned,
+      off: () => style.articleListItemDeprecated,
+    });
+
     const Skeleton = toggleFeatures({
       name: 'isAppRedesigned',
       on: () => SkeletonRedesigned,
@@ -34,12 +40,7 @@ export const ArticleListItemSkeleton = memo(
 
     if (view === ArticleView.LIST) {
       return (
-        <div
-          className={classNames(style.articleListItem, {}, [
-            className,
-            style[view],
-          ])}
-        >
+        <div className={classNames(mainClass, {}, [className, style[view]])}>
           <Card className={style.card}>
             <div className={style.header}>
               <Skeleton width={30} height={30} border='50%' />
@@ -58,7 +59,7 @@ export const ArticleListItemSkeleton = memo(
     }
 
     return (
-      <div className={classNames('', {}, [className, style[view]])}>
+      <div className={classNames(mainClass, {}, [className, style[view]])}>
         <Card className={style.card}>
           <div className={style.imageWrapper}>
             <Skeleton width={200} height={200} className={style.img} />

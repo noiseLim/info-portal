@@ -1,14 +1,6 @@
 .LIST {
-  .types p {
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   .views {
     margin-left: auto;
-    margin-right: 8px;
   }
 
   .header {
@@ -37,6 +29,7 @@
 
   .footer {
     display: flex;
+    align-items: center;
     margin-top: 16px;
   }
 
@@ -52,10 +45,10 @@
   cursor: pointer;
 
   .date {
-    display: none;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
+    display: none;
   }
 
   &:hover {
@@ -81,6 +74,7 @@
 
   .infoWrapper {
     display: flex;
+    align-items: center;
     margin-top: 8px;
   }
 
@@ -105,6 +99,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 8px;
+  }
+}
+
+.articleListItemRedesigned {
+  &.LIST {
+    width: 100%;
   }
 }
