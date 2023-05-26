@@ -91,10 +91,10 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
       target={target}
       data-testid='ArticleListItem'
     >
-      <Card className={style.card} border='round'>
+      <Card className={style.card} border='round' padding='0'>
         <AppImage
           className={style.img}
-          fallback={<Skeleton width={200} height={200} />}
+          fallback={<Skeleton width='100%' height={200} />}
           src={article.img}
           alt={article.title}
         />
@@ -105,7 +105,9 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
               <Text className={style.date} text={article.createdAt} />
               {views}
             </HStack>
-            <HStack gap='4'>{userInfo}</HStack>
+            <HStack className={style.userInfo} gap='4'>
+              {userInfo}
+            </HStack>
           </VStack>
         </VStack>
       </Card>
