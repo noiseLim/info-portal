@@ -1473,58 +1473,6 @@
           ]
         }
       ]
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Биология все любят!",
-      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
-      "views": 13901,
-      "createdAt": "02.02.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [],
-      "id": "WIFWgf2"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Биология все любят!",
-      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
-      "views": 13901,
-      "createdAt": "02.02.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [],
-      "id": "7bL-Kbx"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Биология все любят!",
-      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
-      "views": 13901,
-      "createdAt": "02.02.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [],
-      "id": "foyA2UN"
-    },
-    {
-      "title": "TESTING ARTICLE",
-      "subtitle": "Биология все любят!",
-      "img": "https://kipmu.ru/wp-content/uploads/2021/01/blgtrv.jpg",
-      "views": 13901,
-      "createdAt": "02.02.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [],
-      "id": "yRw60cO"
     }
   ],
   "comments": [
@@ -1593,6 +1541,18 @@
       "userId": "2",
       "text": "comment",
       "id": "Q0-kC9W"
+    },
+    {
+      "articleId": "8",
+      "userId": "2",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sapiente reiciendis ratione, asperiores optio eveniet dolor magni minus quibusdam aspernatur voluptas repellat obcaecati, fuga nisi maiores unde! Impedit, sunt libero.",
+      "id": "O8onp4M"
+    },
+    {
+      "articleId": "8",
+      "userId": "2",
+      "text": "asd",
+      "id": "7BMHpsR"
     }
   ],
   "users": [
@@ -1624,10 +1584,11 @@
       ],
       "features": {
         "isArticleRatingEnabled": false,
-        "isArticleRecommendationsListEnabled": true
+        "isArticleRecommendationsListEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_green_theme",
         "isFirstVisit": true,
         "isArticlesPageWasOpened": true
       },

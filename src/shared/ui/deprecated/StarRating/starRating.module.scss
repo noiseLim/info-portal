@@ -1,14 +1,22 @@
-.starIcon {
-  fill: none;
-  cursor: pointer;
+.starRating {
+  .hovered {
+    fill: var(--primary-color);
+  }
+}
+
+.starRatingRedesigned {
+  .hovered {
+    fill: var(--icon-redesigned);
+  }
 }
 
 .normal {
   fill: none;
 }
 
-.hovered {
-  fill: var(--primary-color);
+.starIcon {
+  fill: none;
+  cursor: pointer;
 }
 
 .selected {

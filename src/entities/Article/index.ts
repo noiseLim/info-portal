@@ -12,4 +12,5 @@ export {
 } from './model/consts/articleConsts';
 
 export { getArticleDetailsData } from './model/selectors/getArticleDetailsData/getArticleDetailsData';
+export { getArticleDetailsIsLoading } from './model/selectors/getArticleDetailsIsLoading/getArticleDetailsIsLoading';
 export { getCanEditArticle } from './model/selectors/getCanEditArticle/getCanEditArticle';

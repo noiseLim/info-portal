@@ -2,9 +2,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleList } from '@/entities/Article';
 import { VStack } from '@/shared/ui/redesigned/Stack';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 import { useGetArticleRecommendationsList } from '../api/articleRecommendationsApi';
 
@@ -34,7 +36,11 @@ export const ArticleRecommendationsList = memo(
         className={classNames('', {}, [className])}
         data-testid='ArticleRecommendationsList'
       >
-        <Text title={t('We recommend')} size={TextSize.L} />
+        <ToggleFeatures
+          feature='isAppRedesigned'
+          on={<Text title={t('We recommend')} size='l' />}
+          off={<TextDeprecated title={t('We recommend')} size={TextSize.L} />}
+        />
         <ArticleList articles={articles} target='_blank' />
       </VStack>
     );
