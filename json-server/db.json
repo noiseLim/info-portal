@@ -1621,9 +1621,8 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
-        "isFirstVisit": true,
-        "isArticlesPageWasOpened": true
+        "isArticlesPageWasOpened": true,
+        "theme": "app_dark_theme"
       },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygd7Gx4_9YJJUZA_a9YTlODyJihC-6M9OWLm61MAOHvU8Kr39DXIQuzKlZIXZJiU7joc&usqp=CA"
     },
