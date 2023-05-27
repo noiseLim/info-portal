@@ -8,17 +8,19 @@ import { getUserInited, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { ToggleFeatures } from '@/shared/lib/features';
-
-import { AppRouter } from './providers/router';
 import { MainLayout } from '@/shared/layouts/MainLayout';
 import { PageLoader } from '@/widgets/PageLoader';
 import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
+
+import { AppRouter } from './providers/router';
+import { useAppToolbar } from './lib/useAppToolbar';
 
 const App = () => {
   const { theme } = useTheme();
 
   const inited = useSelector(getUserInited);
   const dispatch = useAppDispatch();
+  const toolbar = useAppToolbar();
 
   useEffect(() => {
     if (!inited) {
@@ -50,7 +52,7 @@ const App = () => {
               header={<Navbar />}
               content={<AppRouter />}
               sidebar={<Sidebar />}
-              toolbar={<div>111111</div>}
+              toolbar={toolbar}
             />
           </Suspense>
         </div>
