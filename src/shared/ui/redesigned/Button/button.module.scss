@@ -41,19 +41,19 @@
   border-radius: 34px;
 
   &:hover {
-    background: 2px solid var(--accent-redesigned);
+    background: var(--accent-redesigned);
   }
 
   &.normal {
-    background: 2px solid var(--light-bg-redesigned);
+    background: var(--light-bg-redesigned);
   }
 
   &.error {
-    background: 2px solid var(--cancel-redesigned);
+    background: var(--cancel-redesigned);
   }
 
   &.success {
-    background: 2px solid var(--save-redesigned);
+    background: var(--save-redesigned);
   }
 }
 
