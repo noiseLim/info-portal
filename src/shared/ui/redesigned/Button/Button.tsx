@@ -1,5 +1,10 @@
 /* eslint-disable no-unused-vars */
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import {
+  ButtonHTMLAttributes,
+  ForwardedRef,
+  forwardRef,
+  ReactNode,
+} from 'react';
 
 import {
   Additional,
@@ -26,45 +31,48 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: ButtonColor;
 }
 
-export const Button = memo((props: ButtonProps) => {
-  const {
-    className,
-    children,
-    variant = 'outline',
-    square,
-    size = 'm',
-    disabled,
-    fullWidth,
-    addonLeft,
-    addonRight,
-    color = 'normal',
-    ...otherProps
-  } = props;
+export const Button = forwardRef(
+  (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+    const {
+      className,
+      children,
+      variant = 'outline',
+      square,
+      size = 'm',
+      disabled,
+      fullWidth,
+      addonLeft,
+      addonRight,
+      color = 'normal',
+      ...otherProps
+    } = props;
 
-  const mods: Mods = {
-    [style.square]: square,
-    [style.disabled]: disabled,
-    [style.fullWidth]: fullWidth,
-    [style.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
-  };
+    const mods: Mods = {
+      [style.square]: square,
+      [style.disabled]: disabled,
+      [style.fullWidth]: fullWidth,
+      [style.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
+    };
 
-  const additional: Additional = [
-    className,
-    style[variant],
-    style[size],
-    style[color],
-  ];
+    const additional: Additional = [
+      className,
+      style[variant],
+      style[size],
+      style[color],
+    ];
 
-  return (
-    <button
-      {...otherProps}
-      type='button'
-      className={classNames(style.button, mods, additional)}
-      disabled={disabled}
-    >
-      <div className={style.addonLeft}>{addonLeft}</div>
-      {children}
-      <div className={style.addonRight}>{addonRight}</div>
-    </button>
-  );
-});
+    return (
+      <button
+        {...otherProps}
+        type='button'
+        className={classNames(style.button, mods, additional)}
+        disabled={disabled}
+        ref={ref}
+      >
+        <div className={style.addonLeft}>{addonLeft}</div>
+        {children}
+        <div className={style.addonRight}>{addonRight}</div>
+      </button>
+    );
+  }
+);
