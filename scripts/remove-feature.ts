@@ -26,23 +26,24 @@ project.addSourceFilesAtPaths('src/**/*.tsx');
 const files = project.getSourceFiles();
 
 function isToggleFunction(node: Node) {
-  const identifier = node.getFirstDescendantByKind(SyntaxKind.Identifier);
-
-  return identifier?.getText() === toggleComponentName;
-}
-
-function isToggleComponent(node: Node) {
   let isToggleFeatures = false;
+
   node.forEachChild((child) => {
     if (
       child.isKind(SyntaxKind.Identifier) &&
-      child.getText() === toggleComponentName
+      child.getText() === toggleFunctionName
     ) {
       isToggleFeatures = true;
     }
   });
 
   return isToggleFeatures;
+}
+
+function isToggleComponent(node: Node) {
+  const identifier = node.getFirstDescendantByKind(SyntaxKind.Identifier);
+
+  return identifier?.getText() === toggleComponentName;
 }
 
 const replaceToggleFunction = (node: Node) => {
